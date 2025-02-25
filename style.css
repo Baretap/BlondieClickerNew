@@ -61,15 +61,11 @@ img:hover {
     transform: scale(1.1);
 }
 
-#leaderboard {
-    text-align: left;
+.game-container {
+    background-color: rgba(255, 20, 147, 0.3); /* Läpinäkyvä pinkki */
+    padding: 20px;
+    border-radius: 10px;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-#leaderboard li {
-    margin: 5px 0;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
