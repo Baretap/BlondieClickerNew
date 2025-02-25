@@ -4,6 +4,7 @@ body {
     background-image: url('background.jpg');
     background-size: cover;
     color: white;
+    padding-top: 60px; /* Lisää ylimääräinen tila navin yläpuolelle */
 }
 
 nav {
@@ -13,6 +14,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000; /* Varmistaa, että nav on muiden elementtien yläpuolella */
 }
 
 nav ul {
@@ -37,39 +39,37 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    margin-top: 80px; /* Lisää yläreunan marginaali, jotta sisältö ei mene navin alle */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Lisää varjoa tekstille */
+h1, h2, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Lisää teksteihin varjostus */
+    background-color: rgba(0, 0, 0, 0.5); /* Taustaväri parantaa luettavuutta */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-#blondie {
-    background-color: rgba(255, 255, 255, 0.8); /* Lisää vaalea tausta Blondie-kuvalle */
-    padding: 10px;
-    border-radius: 10px;
-    display: inline-block;
+h1 {
+    margin-top: 80px; /* Lisää yläreunan marginaali, jotta sisältö ei mene navin alle */
+}
+
+img {
+    width: 200px;
+    cursor: pointer;
     transition: transform 0.3s;
 }
 
-#blondie:hover {
+img:hover {
     transform: scale(1.1);
 }
 
-#points-container {
-    background-color: rgba(0, 0, 0, 0.7); /* Lisää tumma tausta pisteille */
-    padding: 10px;
-    border-radius: 10px;
+#leaderboard {
+    text-align: left;
     display: inline-block;
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Lisää varjoa tekstille */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-ul#leaderboard {
-    background-color: rgba(0, 0, 0, 0.7); /* Lisää tumma tausta leaderboardille */
-    padding: 20px;
-    border-radius: 10px;
-    list-style-type: none;
-    text-align: left;
-    max-width: 300px;
-    margin: 20px auto;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Lisää varjoa tekstille */
+#leaderboard li {
+    margin: 5px 0;
 }
