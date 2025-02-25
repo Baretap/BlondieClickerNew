@@ -1,7 +1,12 @@
 let points = localStorage.getItem('points') ? parseInt(localStorage.getItem('points')) : 0;
+const username = localStorage.getItem('username'); // Hae tallennettu käyttäjänimi
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('points').innerText = points;
     fetchLeaderboard();
+    if (!username) {
+        alert('Please log in or register first.');
+        window.location.href = 'login.html';
+    }
 });
 
 function addPoint() {
@@ -13,7 +18,7 @@ function addPoint() {
 
 function updateLeaderboard(points) {
     const newScore = {
-        username: 'Player1',  // Replace with dynamic username
+        username: username,  // Käytä tallennettua käyttäjänimeä
         score: points
     };
     fetch('http://localhost:3000/leaderboard', {
