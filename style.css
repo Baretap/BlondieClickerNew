@@ -39,14 +39,37 @@ nav ul li a:hover {
 
 h1 {
     margin-top: 80px; /* Lisää yläreunan marginaali, jotta sisältö ei mene navin alle */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Lisää varjoa tekstille */
 }
 
-img {
-    width: 200px;
-    cursor: pointer;
+#blondie {
+    background-color: rgba(255, 255, 255, 0.8); /* Lisää vaalea tausta Blondie-kuvalle */
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
     transition: transform 0.3s;
 }
 
-img:hover {
+#blondie:hover {
     transform: scale(1.1);
+}
+
+#points-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Lisää tumma tausta pisteille */
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Lisää varjoa tekstille */
+}
+
+ul#leaderboard {
+    background-color: rgba(0, 0, 0, 0.7); /* Lisää tumma tausta leaderboardille */
+    padding: 20px;
+    border-radius: 10px;
+    list-style-type: none;
+    text-align: left;
+    max-width: 300px;
+    margin: 20px auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Lisää varjoa tekstille */
 }
